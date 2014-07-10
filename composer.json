@@ -1,0 +1,33 @@
+{
+	"name": "hypejunction/hypethemex",
+	"type": "elgg-plugin",
+	"repository": "hypeJunction/hypeThemeX",
+	"description": "Responsive theme for Elgg based on Zurb Foundation",
+	"homepage": "http://hypejunction.com",
+	"minimum-stability": "stable",
+	"keywords": [
+		"elgg", "plugin", "theme"
+	],
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Ismayil Khayredinov",
+			"email": "ismayil.khayredinov@gmail.com"
+		}
+	],
+	"extra": {
+		"installer-name": "hypeThemeX"
+	},
+	"config": {
+		"vendor-dir": "vendors",
+		"preferred-install": "dist"
+	},
+	"suggest": {
+		"Elgg/ecml": "@stable"
+	},
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": ">=1.0.8"
+	}
+}
+
