@@ -1,0 +1,84 @@
+// You can load additional fonts from google
+$include-google-fonts: ("Open+Sans:400,600,700", "Open+Sans+Condensed:300,700");
+
+$primary-font-stack: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$secondary-font-stack: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$tertiary-font-stack: "Open Sans Condensed", sans-serif;
+$code-font-stack: Consolas, "Liberation Mono", Courier, monospace;
+$elgg-menu-font-family: $secondary-font-stack;
+
+$elgg-value-none: em-calc(0);
+$elgg-value-tiny: em-calc(5);
+$elgg-value-small: em-calc(7);
+$elgg-value-medium: em-calc(9);
+$elgg-value-large: em-calc(12);
+
+// Colors
+$primary-color: #4690D6;
+$secondary-color: #e9e9e9;
+$border-color: #dddddd;
+$alert-color: #67080a;
+$success-color: #396516;
+$warning-color: #f08a24;
+$info-color: #a0d3e8;
+
+// Layout bg colors
+$layout-topbar-bg-color: #111;
+$layout-header-bg-color: $primary-color;
+$layout-toolbar-bg-color: darken($primary-color, 5%);
+$layout-toolbar-inner-bg-color: darken($primary-color, 20%);
+$layout-body-bg-color: transparent;
+$layout-body-inner-bg-color: #fff;
+$layout-body-border-color: $border-color;
+$layout-footer-bg-color: transparent;
+$layout-footer-inner-bg-color: transparent;
+$layout-footer-border-color: transparent;
+
+$elgg-header-site-color: #fff;
+$elgg-header-main-color: $primary-color;
+
+// Control whether or not CSS classes come through in the CSS files.
+
+$include-html-classes: false !default;
+$include-print-styles: false !default;
+
+$elgg-module-color-base: lighten($secondary-color, 5%);
+$elgg-module-color-highlight: $primary-color;
+
+$elgg-toolbar-height: 45px;
+$elgg-toolbar-font-size: em-calc(14px);
+$elgg-toolbar-primary-color: $layout-toolbar-inner-bg-color;
+$elgg-toolbar-secondary-color: #111;
+$elgg-toolbar-search-bg-color: darken($layout-toolbar-bg-color, 20%);
+$elgg-toolbar-border-thickness: 3px;
+
+$elgg-elgg-menu-font-family: $tertiary-font-stack;
+$elgg-menu-font-weight: normal;
+
+$elgg-avatar-tiny: 25px;
+$elgg-avatar-small: 40px;
+$elgg-avatar-medium: 100px;
+$elgg-avatar-large: 200px;
+
+$elgg-avatar-tiny-radius: 0;
+$elgg-avatar-small-radius: 0;
+$elgg-avatar-medium-radius: 0;
+$elgg-avatar-large-radius: 0;
+
+$elgg-button-bg-default: lighten($primary-color, 10%);
+$elgg-button-bg-submit: darken($primary-color, 10%);
+$elgg-button-bg-action: darken($primary-color, 10%);
+$elgg-button-bg-delete: $alert-color;
+$elgg-button-bg-cancel: #999;
+$elgg-button-bg-disabled: #dedede;
+
+$elgg-list-divider-color: lighten($border-color, 5%);
+$elgg-list-divider-width: 1px;
+$elgg-list-divider-style: solid;
+
+$elgg-entity-menu-color: darken($secondary-color, 20%);
+
+$elgg-river-comments-bg: #f1f1f1;
+
+$elgg-friendspicker-panel-width: 730px;
+$elgg-friendspicker-panel-height: 400px;

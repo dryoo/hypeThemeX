@@ -1,0 +1,23 @@
+@import "../init";
+
+.custom-index {
+	padding: 20px 0;
+	.elgg-inner.prl,
+	.elgg-inner.pvm {
+		padding: 0;
+	}
+	.elgg-module {
+		margin-bottom: rem-calc(20);
+		& > .elgg-body {
+			padding: 0;
+		}
+	}
+	h2 {
+		margin: 0;
+		padding: rem-calc(10);
+	}
+
+	.elgg-module-featured .elgg-module-aside {
+		margin: rem-calc(15);
+	}
+}

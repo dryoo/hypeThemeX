@@ -7,7 +7,3 @@ robots.txt
 web_sitemap_*
 compass_app_log.txt
 .sass-cache
-config.rb
-/sass/
-/vendors/font-awesome/
-/vendors/foundation/scss/

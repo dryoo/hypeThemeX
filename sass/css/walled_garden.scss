@@ -1,0 +1,14 @@
+@import "../init";
+
+.elgg-body-walledgarden {
+	margin: rem-calc(50px) auto;
+	.elgg-module-walledgarden {
+		@include grid-row;
+		.elgg-col .elgg-inner {
+			@include panel;
+		}
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: $secondary-color;
+	}
+}

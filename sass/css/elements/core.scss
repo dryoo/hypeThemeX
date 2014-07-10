@@ -1,0 +1,34 @@
+$include-html-classes: true !default;
+$include-print-styles: true !default;
+
+$include-html-global-classes: $include-html-classes;
+$include-html-inline-list-classes: $include-html-classes;
+$include-html-type-classes: $include-html-classes;
+$include-html-grid-classes: $include-html-classes;
+$include-html-visibility-classes: $include-html-classes;
+$include-html-button-classes: false;
+$include-html-form-classes: $include-html-classes;
+$include-html-form-error-classes: false;
+$include-html-custom-form-classes: false;
+$include-html-media-classes: $include-html-classes;
+$include-html-section-classes: false;
+$include-html-orbit-classes: true;
+$include-html-reveal-classes: false;
+$include-html-joyride-classes: false;
+$include-html-clearing-classes: false;
+$include-html-alert-classes: false;
+$include-html-nav-classes: false;
+$include-html-top-bar-classes: $include-html-classes;
+$include-html-label-classes: false;
+$include-html-panel-classes: flase;
+$include-html-pricing-classes: false;
+$include-html-progress-classes: false;
+$include-html-magellan-classes: false;
+$include-html-tooltip-classes: $include-html-classes;
+
+@charset "UTF-8";
+
+@import "init";
+.clearfix {
+	@include clearfix;
+}

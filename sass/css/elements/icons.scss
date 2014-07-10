@@ -1,0 +1,287 @@
+@import "../../init";
+
+@import "../../../vendors/font-awesome/scss/core";
+@import "../../../vendors/font-awesome/scss/larger";
+@import "../../../vendors/font-awesome/scss/fixed-width";
+@import "../../../vendors/font-awesome/scss/list";
+@import "../../../vendors/font-awesome/scss/bordered-pulled";
+@import "../../../vendors/font-awesome/scss/spinning";
+@import "../../../vendors/font-awesome/scss/rotated-flipped";
+@import "../../../vendors/font-awesome/scss/stacked";
+@import "../../../vendors/font-awesome/scss/icons";
+
+/* ***************************************
+				ICONS
+*************************************** */
+
+.elgg-icon-arrow-left:before  {
+	content: $fa-var-arrow-left;
+}
+.elgg-icon-arrow-right:before  {
+	content: $fa-var-arrow-right;
+}
+.elgg-icon-arrow-two-head:before  {
+	content: $fa-var-arrows-h;
+}
+.elgg-icon-attention:before  {
+	content: $fa-var-exclamation-triangle;
+}
+.elgg-icon-calendar:before  {
+	content: $fa-var-calendar;
+}
+.elgg-icon-cell-phone:before  {
+	content: $fa-var-phone;
+}
+.elgg-icon-checkmark:before  {
+	content: $fa-var-check;
+}
+.elgg-icon-clip:before  {
+	content: $fa-var-paperclip;
+}
+.elgg-icon-cursor-drag-arrow:before  {
+	content: $fa-var-times;
+}
+.elgg-icon-delete-alt:before  {
+	content: $fa-var-times-circle;
+}
+.elgg-icon-delete:before  {
+	content: $fa-var-times;
+}
+.elgg-icon-download:before  {
+	content: $fa-var-download;
+}
+.elgg-icon-eye:before  {
+	content: $fa-var-eye;
+}
+.elgg-icon-facebook:before  {
+	content: $fa-var-facebook;
+}
+.elgg-icon-grid:before  {
+	content: $fa-var-th;
+}
+.elgg-icon-home:before  {
+	content: $fa-var-home;
+}
+.elgg-icon-info:before  {
+	content: $fa-var-info;
+}
+.elgg-icon-link:before  {
+	content: $fa-var-link;
+}
+.elgg-icon-list:before  {
+	content: $fa-var-th-list;
+}
+.elgg-icon-lock-closed:before  {
+	content: $fa-var-lock;
+}
+.elgg-icon-lock-open:before  {
+	content: $fa-var-unlock;
+}
+.elgg-icon-mail-alt:before  {
+	content: $fa-var-envelope-o;
+}
+.elgg-icon-mail:before  {
+	content: $fa-var-envelope;
+}
+.elgg-icon-photo:before  {
+	content: $fa-var-picture-o;
+}
+.elgg-icon-print-alt:before  {
+	content: $fa-var-print;
+}
+.elgg-icon-print:before  {
+	content: $fa-var-print;
+}
+.elgg-icon-push-pin-alt:before  {
+	content: $fa-var-bookmark;
+}
+.elgg-icon-push-pin:before  {
+	content: $fa-var-thumb-tack;
+}
+.elgg-icon-redo:before  {
+	content: $fa-var-repeat;
+}
+.elgg-icon-refresh:before  {
+	content: $fa-var-refresh;
+}
+.elgg-icon-round-arrow-left:before  {
+	content: $fa-var-arrow-circle-o-left;
+}
+.elgg-icon-round-arrow-right:before  {
+	content: $fa-var-arrow-circle-o-right;
+}
+.elgg-icon-round-checkmark:before  {
+	content: $fa-var-check-square-o;
+}
+.elgg-icon-round-minus:before  {
+	content: $fa-var-minus-circle;
+}
+.elgg-icon-round-plus:before  {
+	content: $fa-var-plus-circle;
+}
+.elgg-icon-rss:before  {
+	content: $fa-var-rss;
+}
+.elgg-icon-search-focus:before  {
+	content: $fa-var-search;
+}
+.elgg-icon-search:before  {
+	content: $fa-var-search;
+}
+.elgg-icon-settings-alt:before  {
+	content: $fa-var-cog;
+}
+.elgg-icon-settings:before  {
+	content: $fa-var-cogs;
+}
+.elgg-icon-share:before  {
+	content: $fa-var-share;
+}
+.elgg-icon-shop-cart:before  {
+	content: $fa-var-shopping-cart;
+}
+.elgg-icon-speech-bubble-alt:before  {
+	content: $fa-var-comments;
+}
+.elgg-icon-speech-bubble:before  {
+	content: $fa-var-comment;
+}
+.elgg-icon-star-alt:before  {
+	content: $fa-var-star;
+}
+.elgg-icon-star-empty:before  {
+	content: $fa-var-star-o;
+}
+.elgg-icon-star:before  {
+	content: $fa-var-star;
+}
+.elgg-icon-tag:before  {
+	content: $fa-var-tag;
+}
+.elgg-icon-thumbs-down-alt:before  {
+	content: $fa-var-thumbs-o-down;
+}
+.elgg-icon-thumbs-down:before  {
+	content: $fa-var-thumbs-down;
+}
+
+.elgg-icon-thumbs-up-alt:before  {
+	content: $fa-var-thumbs-o-up;
+}
+.elgg-icon-thumbs-up:before  {
+	content: $fa-var-thumbs-up;
+}
+.elgg-icon-trash:before  {
+	content: $fa-var-trash-o;
+}
+.elgg-icon-twitter:before  {
+	content: $fa-var-twitter;
+}
+.elgg-icon-undo:before  {
+	content: $fa-var-undo;
+}
+.elgg-icon-user:before  {
+	content: $fa-var-user;
+}
+.elgg-icon-users:before  {
+	content: $fa-var-users;
+}
+.elgg-icon-video:before  {
+	content: $fa-var-film;
+}
+
+.elgg-ajax-loader {
+	background: white image-url("ajax_loader_bw.gif") no-repeat center center;
+	min-height: 31px;
+	min-width: 31px;
+	margin: rem-calc(30px) auto;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin elgg-avatar($size: $elgg-avatar-medium, $hover-icon-size: rem-calc(16px), $radius: $elgg-avatar-medium-radius, $border: none) {
+
+	position: relative;
+	display: inline-block;
+	width: $size;
+	height: auto;
+	max-width: 100%;
+	display: block;
+	border: $border;
+	a > img {
+		width: 100%;
+		height: auto;
+		@include radius($radius);
+		@include background-clip(border);
+		@include background-size(contain);
+		z-index: 1;
+	}
+
+	& > .elgg-icon-hover-menu {
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+		cursor: pointer;
+		width: $hover-icon-size;
+		height: $hover-icon-size;
+		z-index: 2;
+		& + * {
+			padding: 0;
+		}
+		&:before  {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 0 0 $hover-icon-size + rem-calc(3px) $hover-icon-size + rem-calc(3px);
+			border-color: transparent transparent white transparent;
+			z-index: 3;
+		}
+		&:after  {
+			content: "";
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			margin: 0;
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 0 0 $hover-icon-size $hover-icon-size;
+			border-color: transparent transparent darken($primary-color, 10%) transparent;
+			z-index: 4;
+		}
+		@media #{$medium-up} {
+			display: none;
+		}
+	}
+}
+
+/* ***************************************
+			AVATAR ICONS
+*************************************** */
+.elgg-avatar-tiny {
+	@include elgg-avatar($size: $elgg-avatar-tiny, $hover-icon-size: rem-calc(10px), $radius: $elgg-avatar-tiny-radius, $border: none);
+}
+.elgg-avatar-small {
+	@include elgg-avatar($size: $elgg-avatar-small, $hover-icon-size: rem-calc(12px), $radius: $elgg-avatar-small-radius, $border: none);
+}
+.elgg-avatar-medium {
+	@include elgg-avatar($size: $elgg-avatar-medium, $hover-icon-size: rem-calc(15px), $radius: $elgg-avatar-tiny-radius, $border: none);
+}
+.elgg-avatar-large {
+	@include elgg-avatar($size: $elgg-avatar-large, $hover-icon-size: rem-calc(15px), $radius: $elgg-avatar-large-radius, $border: none);
+}
+
+/* ***************************************
+			DISTINCT CASES
+*************************************** */
+
+.elgg-icon-push-pin-alt + a,
+.elgg-icon-tag + a {
+	margin-left: 10px;
+}

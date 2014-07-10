@@ -1,0 +1,88 @@
+@import "../init";
+
+.messages-container {
+	min-height: rem-calc(200px);
+
+	.elgg-list > .elgg-item {
+		padding: 0;
+		font-size: rem-calc(14px);
+		line-height: rem-calc(16px);
+	}
+
+}
+
+.message {
+	position: relative;
+	padding: 5px 10px;
+	background: #f4f4f4;
+	a {
+		color: #666;
+		font-weight: normal;
+	}
+	&.unread {
+		background: #fff;
+		font-weight: bold;
+		a {
+			color: #666;
+			font-weight: bold;
+		}
+	}
+
+	& > .elgg-body {
+		.messages-delete {
+			position: absolute;
+			right: 0;
+			top: 0;
+			margin: 0;
+			padding: 2px 4px;
+			background: $border-color;
+			color: $alert-color;
+			line-height: 25px;
+			text-align: center;
+			.elgg-icon {
+				color: white;
+			}
+			&:hover {
+				background: $alert-color;
+				color: white;
+				@include single-transition;
+			}
+		}
+
+		.messages-timestamp {
+			font-weight: normal;
+			position: absolute;
+			right: 0;
+			top: auto;
+			bottom: 0;
+			margin: 0;
+			padding: 8px;
+			line-height: 25px;
+		}
+
+		.messages-owner {
+			min-height: 25px;
+		}
+
+		.messages-subject {
+			margin-left: 32px;
+			input[type="checkbox"] {
+				margin: 0 7px 7px 0;
+			}
+		}
+	}
+
+	.elgg-main > & {
+		padding: 20px;
+		border-bottom: 1px solid $border-color;
+		background: lighten($border-color, 10%);
+		margin-bottom: 10px;
+	}
+}
+
+.elgg-context-messages {
+	.elgg-output {
+		padding: 20px;
+	}
+}
+

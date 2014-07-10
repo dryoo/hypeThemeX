@@ -1,0 +1,96 @@
+@import "../../init";
+
+/****************************
+	FILE TOOLS
+****************************/
+
+#file_tools_breadcrumbs {
+	@include crumb-container;
+	li {
+		@include crumbs;
+	}
+	li a {
+		float: none;
+		display: inline-block;
+	}
+	li:after { content: ""; }
+}
+#file_tools_breadcrumbs {
+	margin-top: 5px;
+	font-weight: bold;
+	margin-left: 0;
+	padding: 3px;
+	ul {
+		padding: 3px 10px;
+		margin: 0;
+	}
+}
+#file_tools_list_files_container {
+	margin-top: $elgg-value-medium;
+}
+#file_tools_breadcrumbs ul {
+	padding: 3px 10px;
+	margin: 0;
+}
+#file_tools_breadcrumbs ul li a {
+	font-size: 0.9em;
+	font-weight: normal;
+}
+#file_tools_list_files_container {
+	.elgg-content {
+		margin-top: rem-calc(15);
+	}
+}
+
+#file-tools-folder-tree {
+	overflow-y: auto;
+	margin-bottom: 20px;
+}
+
+.elgg-sidebar .tree > ul {
+	margin: 10px 0;
+	padding: 10px 0;
+}
+
+.elgg-sidebar .tree-classic li a, .tree li span {
+	line-height: 25px;
+	margin: 0;
+	padding: 0 8px;
+	vertical-align: middle;
+	font-size: 12px;
+	font-weight: normal;
+	display: inline-block;
+	height: auto;
+	white-space: nowrap;
+	margin: -4px 0 4px;
+}
+.elgg-sidebar .tree-classic li a.clicked, .elgg-sidebar .tree-classic li a.clicked:hover, .elgg-sidebar .tree-classic li span.clicked {
+	line-height: 25px;
+	display: block;
+	padding: 0 8px;
+	margin: 0;
+	vertical-align: middle;
+	font-size: 12px;;
+	background: lighten($border-color, 7%);
+	border: none;
+	color: $body-font-color;
+	font-weight: bold;
+	display: inline-block;
+	height: auto;
+	white-space: nowrap;
+	margin: -4px 0 4px;
+}
+.elgg-menu-item-root {
+	width: 100%;
+}
+
+
+.gallery-photostream {
+	& > li {
+		width: 100%;
+		margin: 0;
+	}
+	@media #{$medium-up} {
+		@include block-grid(2);
+	}
+}

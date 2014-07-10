@@ -1,0 +1,105 @@
+@import "../../init";
+
+.elgg-module-info {
+	@include elgg-module($type: 'info');
+}
+
+.elgg-module-aside {
+	@include elgg-module($type: 'aside');
+}
+
+.elgg-module-popup {
+	@include elgg-module($type: 'popup');
+	z-index: 200;
+}
+
+.elgg-module-dropdown {
+	@include elgg-module($type: 'popup');
+	background-color: white;
+
+	display: none;
+
+	min-width: 210px;
+	padding: 12px;
+	margin-right: 0px;
+	z-index: 200;
+
+	@include box-shadow(0 0 5px rgba(#333, 0.4));
+
+	position: absolute;
+	right: 0;
+	top: 100%;
+
+	margin: 10px;
+
+}
+
+.elgg-module-featured, .elgg-module-highlight {
+	@include elgg-module($type: 'featured');
+}
+
+/* ***************************************
+	Widgets
+*************************************** */
+.elgg-widgets {
+	float: right;
+	min-height: 30px;
+}
+.elgg-widget-add-control {
+	text-align: right;
+	@include grid-column(12);
+	padding: 15px;
+}
+
+.elgg-widgets-add-panel {
+	@include panel;
+	border: none;
+	@include grid-column(12);
+	padding: $elgg-value-large;
+	margin-bottom: rem-calc(25px);
+	li {
+		@include grid-column(12);
+		@media #{$medium-up} {
+			@include grid-column(3);
+		}
+		color: darken($border-color, 30%);
+		background: lighten($border-color, 5%);
+		border: $border-color 1px solid;
+		&.elgg-state-available {
+			color: $primary-color;
+			cursor: pointer;
+			&:hover {
+				background: lighten($border-color, 2%);
+			}
+		}
+		padding: rem-calc(5px) rem-calc(10px);
+	}
+}
+
+.elgg-module-widget {
+	@include elgg-module($type: 'widget');
+	& > .elgg-head {
+		line-height: rem-calc(40px);
+	}
+	&.elgg-state-draggable:hover {
+		@include box-shadow(0 0 4px 1px rgba(darken($border-color, 10%),0.5));
+	}
+	&.elgg-state-draggable .elgg-widget-handle {
+		cursor: move;
+	}
+	.elgg-widget-edit {
+		display: none;
+		background: lighten($border-color, 3%);
+	}
+	.elgg-widget-content {
+		padding: $elgg-value-medium;
+	}
+
+	position: relative;
+
+}
+
+.elgg-widget-placeholder {
+	border: 2px dashed $border-color;
+	margin-bottom: rem-calc(30px);
+}
