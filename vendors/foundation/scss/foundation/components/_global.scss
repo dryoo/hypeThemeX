@@ -29,12 +29,12 @@ $base-line-height: 150% !default;
 // We use this to control border radius.
 // $radius - Default: $global-radius || 4px
 @mixin radius($radius:$global-radius) {
-	@if $radius {
-		@if $experimental {
-			-webkit-border-radius: $radius;
-		}
-		border-radius: $radius;
-	}
+  @if $radius {
+    @if $experimental {
+      -webkit-border-radius: $radius;
+    }
+    border-radius: $radius;
+  }
 }
 
 // @mixins
@@ -57,16 +57,16 @@ $base-line-height: 150% !default;
 // We can control whether or not we have inset shadows edges.
 // $active - Default: true, Options: false
 @mixin inset-shadow($active:true) {
-	@if $experimental {
-		-webkit-box-shadow: $shiny-edge-size $shiny-edge-color inset;
-	}
-	box-shadow: $shiny-edge-size $shiny-edge-color inset;
+  @if $experimental {
+    -webkit-box-shadow: $shiny-edge-size $shiny-edge-color inset;
+  }
+  box-shadow: $shiny-edge-size $shiny-edge-color inset;
 
-	@if $active { &:active {
-		@if $experimental {
-			-webkit-box-shadow: $shiny-edge-size $shiny-edge-active-color inset;
-		}
-		box-shadow: $shiny-edge-size $shiny-edge-active-color inset; } }
+  @if $active { &:active {
+    @if $experimental {
+      -webkit-box-shadow: $shiny-edge-size $shiny-edge-active-color inset;
+    }
+    box-shadow: $shiny-edge-size $shiny-edge-active-color inset; } }
 }
 
 // @mixins
@@ -76,22 +76,22 @@ $base-line-height: 150% !default;
 // $speed - Default: 300ms
 // $ease - Default:ease-out, Options: http://css-tricks.com/almanac/properties/t/transition-timing-function/
 @mixin single-transition($property:all, $speed:300ms, $ease:ease-out) {
-	@if $experimental {
-		-webkit-transition: $property $speed $ease;
-		-moz-transition: $property $speed $ease;
-	}
-	transition: $property $speed $ease;
+  @if $experimental {
+    -webkit-transition: $property $speed $ease;
+    -moz-transition: $property $speed $ease;
+  }
+  transition: $property $speed $ease;
 }
 
 // @mixins
 //
 // We use this to add box-sizing across browser prefixes
 @mixin box-sizing($type:border-box) {
-	@if $experimental {
-		-moz-box-sizing: $type;
-		-webkit-box-sizing: $type;
-	}
-	box-sizing: $type;
+  @if $experimental {
+    -moz-box-sizing: $type;
+    -webkit-box-sizing: $type;
+  }
+  box-sizing: $type;
 }
 
 // @mixins
@@ -101,34 +101,34 @@ $base-line-height: 150% !default;
 // $triangle-color - Used to set border-color which makes up triangle. No default
 // $triangle-direction - Used to determine which direction triangle points. Options: top, bottom, left, right
 @mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
-	content: "";
-	display: block;
-	width: 0;
-	height: 0;
-	border: inset $triangle-size;
-	@if ($triangle-direction == top) {
-		border-color: $triangle-color transparent transparent transparent;
-		border-top-style: solid;
-	}
-	@if ($triangle-direction == bottom) {
-		border-color: transparent transparent $triangle-color transparent;
-		border-bottom-style: solid;
-	}
-	@if ($triangle-direction == left) {
-		border-color: transparent transparent transparent $triangle-color;
-		border-left-style: solid;
-	}
-	@if ($triangle-direction == right) {
-		border-color: transparent $triangle-color transparent transparent;
-		border-right-style: solid;
-	}
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border: inset $triangle-size;
+  @if ($triangle-direction == top) {
+    border-color: $triangle-color transparent transparent transparent;
+    border-top-style: solid;
+  }
+  @if ($triangle-direction == bottom) {
+    border-color: transparent transparent $triangle-color transparent;
+    border-bottom-style: solid;
+  }
+  @if ($triangle-direction == left) {
+    border-color: transparent transparent transparent $triangle-color;
+    border-left-style: solid;
+  }
+  @if ($triangle-direction == right) {
+    border-color: transparent $triangle-color transparent transparent;
+    border-right-style: solid;
+  }
 }
 
 // We use this to do clear floats
 @mixin clearfix {
-	*zoom:1;
-	&:before, &:after { content: " "; display: table; }
-	&:after { clear: both; }
+  *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
 }
 
 // @mixins
@@ -138,20 +138,20 @@ $base-line-height: 150% !default;
 // $fade-time - Default: 300ms
 // $glowing-effect-color - Default: fade-out($primary-color, .25)
 @mixin block-glowing-effect($selector:focus, $fade-time:300ms, $glowing-effect-color:fade-out($primary-color, .25)) {
-	@if $experimental {
-		-webkit-transition: -webkit-box-shadow $fade-time, border-color $fade-time ease-in-out;
-		-moz-transition: -moz-box-shadow $fade-time, border-color $fade-time ease-in-out;
-	}
-	transition: box-shadow $fade-time, border-color $fade-time ease-in-out;
+  @if $experimental {
+    -webkit-transition: -webkit-box-shadow $fade-time, border-color $fade-time ease-in-out;
+    -moz-transition: -moz-box-shadow $fade-time, border-color $fade-time ease-in-out;
+  }
+  transition: box-shadow $fade-time, border-color $fade-time ease-in-out;
 
-	&:#{$selector} {
-		@if $experimental {
-			-webkit-box-shadow: 0 0 5px $glowing-effect-color;
-			-moz-box-shadow: 0 0 5px $glowing-effect-color;
-		}
-		box-shadow: 0 0 5px $glowing-effect-color;
-		border-color: $glowing-effect-color;
-	}
+  &:#{$selector} {
+    @if $experimental {
+      -webkit-box-shadow: 0 0 5px $glowing-effect-color;
+      -moz-box-shadow: 0 0 5px $glowing-effect-color;
+    }
+    box-shadow: 0 0 5px $glowing-effect-color;
+    border-color: $glowing-effect-color;
+  }
 }
 
 // @mixins
@@ -160,13 +160,13 @@ $base-line-height: 150% !default;
 // $horizontal: Default: 0
 // $vertical: Default: 0
 @mixin translate2d($horizontal:0, $vertical:0) {
-	@if $experimental {
-		-webkit-transform: translate($horizontal,$vertical);
-		-moz-transform: translate($horizontal,$vertical);
-		-ms-transform: translate($horizontal,$vertical);
-		-o-transform: translate($horizontal,$vertical);
-	}
-	transform: translate($horizontal,$vertical)
+  @if $experimental {
+    -webkit-transform: translate($horizontal,$vertical);
+    -moz-transform: translate($horizontal,$vertical);
+    -ms-transform: translate($horizontal,$vertical);
+    -o-transform: translate($horizontal,$vertical);
+  }
+  transform: translate($horizontal,$vertical)
 }
 
 // We use these to control various global styles
@@ -184,11 +184,11 @@ $text-direction: ltr !default;
 $default-float: left !default;
 $opposite-direction: right !default;
 @if $text-direction == ltr {
-	$default-float: left;
-	$opposite-direction: right;
-	} @else {
-	$default-float: right;
-	$opposite-direction: left;
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
 }
 // We use these as default colors throughout
 $primary-color: #008CBA !default;
@@ -256,115 +256,114 @@ $cursor-text-value: text !default;
 
 
 @include exports("global") {
-	@if $include-html-global-classes {
+  meta.foundation-version {
+    font-family: "/5.1.0/";
+  }
+  // Used to provide media query values for javascript components.
+  // Forward slash placed around everything to convince PhantomJS to read the value.
+  meta.foundation-mq-small {
+    font-family: "/" + unquote($small-only) + "/";
+    width: lower-bound($small-range);
+  }
 
-		meta.foundation-version {
-			font-family: "/5.1.0/";
-		}
-		// Used to provide media query values for javascript components.
-		// Forward slash placed around everything to convince PhantomJS to read the value.
-		meta.foundation-mq-small {
-			font-family: "/" + unquote($small-only) + "/";
-			width: lower-bound($small-range);
-		}
+  meta.foundation-mq-medium {
+    font-family: "/" + unquote($medium-up) + "/";
+    width: lower-bound($medium-range);
+  }
 
-		meta.foundation-mq-medium {
-			font-family: "/" + unquote($medium-up) + "/";
-			width: lower-bound($medium-range);
-		}
+  meta.foundation-mq-large {
+    font-family: "/" + unquote($large-up) + "/";
+    width: lower-bound($large-range);
+  }
 
-		meta.foundation-mq-large {
-			font-family: "/" + unquote($large-up) + "/";
-			width: lower-bound($large-range);
-		}
+  meta.foundation-mq-xlarge {
+    font-family: "/" + unquote($xlarge-up) + "/";
+    width: lower-bound($xlarge-range);
+  }
 
-		meta.foundation-mq-xlarge {
-			font-family: "/" + unquote($xlarge-up) + "/";
-			width: lower-bound($xlarge-range);
-		}
+  meta.foundation-mq-xxlarge {
+    font-family: "/" + unquote($xxlarge-up) + "/";
+    width: lower-bound($xxlarge-range);
+  }
 
-		meta.foundation-mq-xxlarge {
-			font-family: "/" + unquote($xxlarge-up) + "/";
-			width: lower-bound($xxlarge-range);
-		}
+  meta.foundation-data-attribute-namespace {
+    font-family: #{$namespace};
+  }
 
-		meta.foundation-data-attribute-namespace {
-			font-family: #{$namespace};
-		}
+  // Must be 100% for off canvas to work
+  html, body { height: 100%; }
 
-		// Must be 100% for off canvas to work
-		html, body { height: 100%; }
+  @if $include-html-global-classes {
 
+    // Set box-sizing globally to handle padding and border widths
+    *,
+    *:before,
+    *:after {
+      @include box-sizing(border-box);
+    }
 
-		// Set box-sizing globally to handle padding and border widths
-		*,
-		*:before,
-		*:after {
-			@include box-sizing(border-box);
-		}
+    html,
+    body { font-size: $base-font-size; }
 
-		html,
-		body { font-size: $base-font-size; }
+    // Default body styles
+    body {
+      background: $body-bg;
+      color: $body-font-color;
+      padding: 0;
+      margin: 0;
+      font-family: $body-font-family;
+      font-weight: $body-font-weight;
+      font-style: $body-font-style;
+      line-height: 1; // Set to $base-line-height to take on browser default of 150%
+      position: relative;
+      cursor: $cursor-default-value;
+    }
 
-		// Default body styles
-		body {
-			background: $body-bg;
-			color: $body-font-color;
-			padding: 0;
-			margin: 0;
-			font-family: $body-font-family;
-			font-weight: $body-font-weight;
-			font-style: $body-font-style;
-			line-height: 1; // Set to $base-line-height to take on browser default of 150%
-			position: relative;
-			cursor: $cursor-default-value;
-		}
+  a:hover { cursor: $cursor-pointer-value; }
 
-		a:hover { cursor: $cursor-pointer-value; }
+    // Grid Defaults to get images and embeds to work properly
+    img,
+    object,
+    embed { max-width: 100%; height: auto; }
 
-		// Grid Defaults to get images and embeds to work properly
-		img,
-		object,
-		embed { max-width: 100%; height: auto; }
+    object,
+    embed { height: 100%; }
+    img { -ms-interpolation-mode: bicubic; }
 
-		object,
-		embed { height: 100%; }
-		img { -ms-interpolation-mode: bicubic; }
+    #map_canvas,
+    .map_canvas {
+      img,
+      embed,
+      object { max-width: none !important;
+      }
+    }
 
-		#map_canvas,
-		.map_canvas {
-			img,
-			embed,
-			object { max-width: none !important;
-			}
-		}
+    // Miscellaneous useful HTML classes
+    .left   { float: left !important; }
+    .right  { float: right !important; }
+    .clearfix     { @include clearfix; }
+    .hide         { display: none; }
 
-		// Miscellaneous useful HTML classes
-		.left   { float: left !important; }
-		.right  { float: right !important; }
-		.clearfix     { @include clearfix; }
-		.hide         { display: none; }
+    // Font smoothing
+    // Antialiased font smoothing works best for light text on a dark background.
+    // Apply to single elements instead of globally to body.
+    // Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
+    .antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
-		// Font smoothing
-		// Antialiased font smoothing works best for light text on a dark background.
-		// Apply to single elements instead of globally to body.
-		// Note this only applies to webkit-based desktop browsers and Firefox 25 (and later) on the Mac.
-		.antialiased { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+    // Get rid of gap under images by making them display: inline-block; by default
+    img {
+      display: inline-block;
+      vertical-align: middle;
+    }
 
-		// Get rid of gap under images by making them display: inline-block; by default
-		img {
-			display: inline-block;
-			vertical-align: middle;
-		}
+    //
+    // Global resets for forms
+    //
 
-		//
-		// Global resets for forms
-		//
+    // Make sure textarea takes on height automatically
+    textarea { height: auto; min-height: 50px; }
 
-		// Make sure textarea takes on height automatically
-		textarea { height: auto; min-height: 50px; }
-
-		// Make select elements 100% width by default
-		select { width: 100%; }
-	}
+    // Make select elements 100% width by default
+    select { width: 100%; }
+  }
 }

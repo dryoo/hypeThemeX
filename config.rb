@@ -6,6 +6,6 @@ images_dir = "graphics"
 javascripts_dir = "views/default/js/"
 fonts_dir = "fonts"
 
-output_style = :expanded
+output_style = :compressed
 line_comments = false
 preferred_syntax = :scss

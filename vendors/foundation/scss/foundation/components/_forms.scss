@@ -21,7 +21,7 @@ $input-font-color: rgba(0,0,0,0.75) !default;
 $input-font-size: rem-calc(14) !default;
 $input-bg-color: #fff !default;
 $input-focus-bg-color: scale-color(#fff, $lightness: -2%) !default;
-$input-border-color: scale-color(#fff, $lightness: -40%) !default;
+$input-border-color: scale-color(#fff, $lightness: -20%) !default;
 $input-focus-border-color: scale-color(#fff, $lightness: -40%) !default;
 $input-border-style: solid !default;
 $input-border-width: 1px !default;
@@ -44,7 +44,7 @@ $legend-padding: rem-calc(0 3) !default;
 
 // We use these to style the prefix and postfix input elements
 $input-prefix-bg: scale-color(#fff, $lightness: -5%) !default;
-$input-prefix-border-color: scale-color(#fff, $lightness: -40%) !default;
+$input-prefix-border-color: scale-color(#fff, $lightness: -20%) !default;
 $input-prefix-border-size: 1px !default;
 $input-prefix-border-type: solid !default;
 $input-prefix-overflow: hidden !default;

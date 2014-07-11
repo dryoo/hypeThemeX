@@ -9,6 +9,10 @@ Responsive theme for Elgg built with SCSS and Foundation 5
 * Minimal interference with and replacement of core Elgg views
 * All Font Awesome icons are available via elgg_view_icon() (do not use fa prefix)
 
+### Versioning
+
+* Elgg 1.9 compatible version is at a master branch
+* Versions 3.0+ are for Elgg 1.9, everything under is for earlier versions of Elgg
 
 ### Acknowledgements / Credits / References
 

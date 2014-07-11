@@ -28,36 +28,31 @@ function init() {
 	elgg_extend_view('css/elgg', 'css/theme/custom', 999);
 	elgg_extend_view('css/elgg', 'css/theme/plugins', 999);
 
-	elgg_extend_view('page/elements/head', 'framework/fonts/font-awesome');
-	elgg_extend_view('page/elements/head', 'framework/fonts/open-sans');
 	elgg_extend_view('page/elements/head', 'framework/metatags/viewport');
 
 	elgg_unextend_view('page/elements/header', 'search/header');
 
-	elgg_register_js('modernizr', '/mod/' . PLUGIN_ID . '/vendors/foundation/js/vendor/modernizr.js', 'head', 100);
-	elgg_register_js('fastclick', '/mod/' . PLUGIN_ID . '/vendors/foundation/js/vendor/fastclick.js', 'head', 110);
+	// Load fonts
+	elgg_register_css('fonts.font-awesome', '/mod/' . PLUGIN_ID . '/vendors/fonts/font-awesome.css');
+	elgg_load_css('fonts.font-awesome');
+	elgg_register_css('fonts.open-sans', '/mod/' . PLUGIN_ID . '/vendors/fonts/open-sans.css');
+	elgg_load_css('fonts.open-sans');
 
-	elgg_register_js('jquery', '/mod/' . PLUGIN_ID . '/vendors/jquery/js/jquery-1.11.0.min.js', 'head', 120);
-	elgg_register_js('jquery-migrate', '/mod/' . PLUGIN_ID . '/vendors/jquery/js/jquery-migrate-1.2.1.min.js', 'head', 130);
-	elgg_register_js('jquery-ui', '/mod/' . PLUGIN_ID . '/vendors/jquery/js/jquery-ui-1.10.4.min.js', 'head', 140);
-	elgg_register_css('jquery-ui', '/mod/' . PLUGIN_ID . '/vendors/jquery/css/smoothness/jquery-ui-1.10.4.min.css');
+	elgg_define_js('modernizr', array(
+		'src' => '/mod/' . PLUGIN_ID . '/vendors/modernizr/modernizr.js',
+			//'exports' => 'window.Modernizr',
+	));
+	elgg_define_js('fastclick', array(
+		'src' => '/mod/' . PLUGIN_ID . '/vendors/fastclick/lib/fastclick.js',
+			//'exports' => 'Fastclick',
+	));
 
-	elgg_register_js('foundation', '/mod/' . PLUGIN_ID . '/vendors/foundation/js/foundation.min.js', 'footer', 200);
+	elgg_define_js('foundation', array(
+		'src' => '/mod/' . PLUGIN_ID . '/vendors/foundation/js/foundation.min.js',
+		'deps' => array('jquery', 'modernizr', 'fastclick')
+	));
 
-	elgg_register_simplecache_view('js/theme/init');
-	elgg_register_js('elgg.theme', elgg_get_simplecache_url('js', 'theme/init'), 'footer', 900);
-
-	elgg_load_js('modernizr');
-	elgg_load_js('fastclick');
-
-	elgg_load_js('jquery'); // Foundation needs higher version of jquery than that in Elgg
-	elgg_load_js('jquery-migrate');
-	elgg_load_js('jquery-ui');
-
-	elgg_load_js('foundation'); // loads Foundation js
-
-	elgg_load_js('elgg.theme');
-	elgg_load_css('jquery-ui');
+	elgg_require_js('theme/init');
 }
 
 /**

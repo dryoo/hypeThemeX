@@ -14,7 +14,7 @@
 $include-html-form-classes: $include-html-classes !default;
 
 // Controlling border styles and background colors for the switch container
-$switch-border-color: scale-color(#fff, $lightness: -40%) !default;
+$switch-border-color: scale-color(#fff, $lightness: -20%) !default;
 $switch-border-style: solid !default;
 $switch-border-width: 1px !default;
 $switch-bg: #fff !default;

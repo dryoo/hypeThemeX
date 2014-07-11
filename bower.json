@@ -1,0 +1,8 @@
+{
+	"name": "hypeThemeX",
+	"version": "2.0.0",
+	"dependencies": {
+		"foundation": "~5.1.0",
+		"components-font-awesome": "4.1.0"
+	}
+}

@@ -1,12 +1,12 @@
 @import "../../init";
 
 .elgg-state-selected {
-	@extend .active;
-	@extend .selected;
+	@extend .active !optional;
+	@extend .selected !optional;
 }
 
 .elgg-state-disabled {
-	@extend .disabled;
+	@extend .disabled !optional;
 }
 
 .hidden {

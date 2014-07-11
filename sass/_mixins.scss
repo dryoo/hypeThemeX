@@ -34,18 +34,18 @@
 
 	// If a column number is given, calculate width
 	@if $columns {
-		width: gridCalc($columns, $total-columns);
+		width: grid-calc($columns, $total-columns);
 
 		// If last column, float naturally instead of to the right
 		@if $last-column { float: $opposite-direction; }
 	}
 
 	// If offset, calculate appropriate margins
-	@if $offset { margin-#{$default-float}: gridCalc($offset, $total-columns); }
+	@if $offset { margin-#{$default-float}: grid-calc($offset, $total-columns); }
 
 	// Source Ordering, adds left/right depending on which you use.
-	@if $push { #{$default-float}: gridCalc($push, $total-columns); #{$opposite-direction}: auto; }
-	@if $pull { #{$opposite-direction}: gridCalc($pull, $total-columns); #{$default-float}: auto; }
+	@if $push { #{$default-float}: grid-calc($push, $total-columns); #{$opposite-direction}: auto; }
+	@if $pull { #{$opposite-direction}: grid-calc($pull, $total-columns); #{$default-float}: auto; }
 
 	// If centered, get rid of float and add appropriate margins
 	@if $center {
